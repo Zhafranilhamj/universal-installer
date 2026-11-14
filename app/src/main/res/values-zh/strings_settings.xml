@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">回退</string>
     <string name="setting_porter_not_running">Porter 已安装但未运行</string>
     <string name="setting_porter_start_service_hint">请先打开 Porter 并启动服务</string>
-    <string name="setting_default_uninstaller_title">设为默认卸载程序</string>
-    <string name="setting_default_uninstaller_subtitle">将 Multiversal-installer 设为默认卸载处理程序（需要 Shizuku、Porter 或 Root）</string>
-    <string name="setting_default_uninstaller_needs_backend">请先启用 Shizuku 或 Root 以更改默认卸载程序</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer 现已作为默认卸载程序</string>
-    <string name="setting_default_uninstaller_disabled">已清除默认卸载程序偏好设置</string>
-    <string name="setting_default_uninstaller_failed">更改默认卸载程序失败</string>
     <string name="about_section_more_apps">我们的应用</string>
     <string name="setting_more_apps_title">PWHS 出品的更多应用</string>
     <string name="setting_more_apps_subtitle">发现开源且实用的工具</string>

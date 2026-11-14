@@ -243,7 +243,6 @@ class SettingViewModel(
         privilegeDelegate.useCustomAuthorizer,
         privilegeDelegate.customAuthorizerCommand,
         privilegeDelegate.useMicroG,
-        privilegeDelegate.isDefaultUninstaller,
         priorityDelegate.backendPriority,
     ) { flows ->
         SettingUiStateBuilder.build(application, backendFactory, flows)
@@ -280,7 +279,6 @@ class SettingViewModel(
     fun setPrivilegedOption(option: PrivilegedOption, enabled: Boolean) = privilegeDelegate.setPrivilegedOption(option, enabled)
     fun setInstallerPackageName(packageName: String) = privilegeDelegate.setInstallerPackageName(packageName)
     fun toggleDefaultInstaller(enabled: Boolean) = privilegeDelegate.toggleDefaultInstaller(enabled)
-    fun toggleDefaultUninstaller(enabled: Boolean) = privilegeDelegate.toggleDefaultUninstaller(enabled)
     val useCustomAuthorizer: StateFlow<Boolean> = privilegeDelegate.useCustomAuthorizer
     val customAuthorizerCommand: StateFlow<String> = privilegeDelegate.customAuthorizerCommand
     fun setCustomAuthorizerCommand(command: String) = privilegeDelegate.setCustomAuthorizerCommand(command)

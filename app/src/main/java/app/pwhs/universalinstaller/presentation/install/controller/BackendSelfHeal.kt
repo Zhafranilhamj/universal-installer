@@ -53,16 +53,17 @@ object BackendSelfHeal {
             reportHealth("root", healthy)
             if (state == RootState.READY) {
                 val installer = prefs[PreferencesKeys.PREFERRED_DEFAULT_INSTALLER] == true
-                val uninstaller = prefs[PreferencesKeys.PREFERRED_DEFAULT_UNINSTALLER] == true
-                if (installer || uninstaller) {
+                if (installer) {
                     app.pwhs.universalinstaller.util.BatteryOptimizationHelper.allowBackground(application, root = true)
+                    factory.setDefaultInstallerViaRoot(application, android.content.ComponentName(
+                        application, "app.pwhs.universalinstaller.presentation.install.DialogInstallActivity"), true)
+                        .onFailure { Timber.w(it, "Could not restore Root installer default") }
                 }
-                if (installer) factory.setDefaultInstallerViaRoot(application, android.content.ComponentName(
-                    application, "app.pwhs.universalinstaller.presentation.install.DialogInstallActivity"), true)
-                    .onFailure { Timber.w(it, "Could not restore Root installer default") }
-                if (uninstaller) factory.setDefaultUninstallerViaRoot(application, android.content.ComponentName(
-                    application, "app.pwhs.universalinstaller.presentation.manage.uninstall.DialogUninstallActivity"), true)
-                    .onFailure { Timber.w(it, "Could not restore Root uninstaller default") }
+                // Releases up to 1.23.3 could disable the stock system uninstaller component when
+                // the old "set as default uninstaller" switch was on. Re-enable it best effort on
+                // every cold start so nobody is left with a dead Settings → Uninstall button.
+                factory.restoreStockUninstallerViaRoot(application)
+                    .onFailure { Timber.w(it, "Could not restore stock uninstaller components") }
             }
             if (!healthy) {
                 Timber.i("BackendSelfHeal: USE_ROOT on but root not currently ready ($state) — keeping pref, runtime will fall back if needed")

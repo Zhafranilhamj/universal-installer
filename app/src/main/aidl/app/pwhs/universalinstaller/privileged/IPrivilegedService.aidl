@@ -13,9 +13,9 @@ interface IPrivilegedService {
     void setDefaultInstaller(in ComponentName component, boolean lock);
 
     /**
-     * Make `component` the preferred handler for package uninstall intents.
-     * lock=true → clear competing preferred activities and set ours as default.
-     * lock=false → clear only our own preferred activities, letting Android's chooser re-engage.
+     * Re-enable the stock system uninstaller components that earlier releases may have disabled
+     * when the "set as default uninstaller" switch was used (up to 1.23.3). Best effort and
+     * idempotent: safe to call at any time, including when nothing was ever disabled.
      */
-    void setDefaultUninstaller(in ComponentName component, boolean lock);
+    void restoreStockUninstaller();
 }

@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">احتياطي</string>
     <string name="setting_porter_not_running">Porter مثبت ولكنه لا يعمل</string>
     <string name="setting_porter_start_service_hint">افتح Porter وابدأ الخدمة أولاً</string>
-    <string name="setting_default_uninstaller_title">تعيين كأداة إلغاء التثبيت الافتراضية</string>
-    <string name="setting_default_uninstaller_subtitle">تعيين Multiversal-installer كمعالج افتراضي لإلغاء التثبيت (يتطلب Shizuku أو Porter أو Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">قم بتمكين Shizuku أو Root أولاً لتغيير الأداة الافتراضية</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer هو الآن أداة إلغاء التثبيت الافتراضية</string>
-    <string name="setting_default_uninstaller_disabled">تم مسح تفضيل أداة إلغاء التثبيت الافتراضية</string>
-    <string name="setting_default_uninstaller_failed">فشل تغيير أداة إلغاء التثبيت الافتراضية</string>
     <string name="about_section_more_apps">تطبيقاتنا</string>
     <string name="setting_more_apps_title">المزيد من التطبيقات بواسطة PWHS</string>
     <string name="setting_more_apps_subtitle">اكتشف أدوات مفيدة ومفتوحة المصدر</string>

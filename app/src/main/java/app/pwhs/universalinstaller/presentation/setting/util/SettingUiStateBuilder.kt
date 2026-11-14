@@ -55,9 +55,8 @@ object SettingUiStateBuilder {
         val useCustomAuthorizer = flows.getOrNull(15) as? Boolean ?: false
         val customAuthorizerCommand = flows.getOrNull(16) as? String ?: ""
         val useMicroG = flows.getOrNull(17) as? Boolean ?: false
-        val isDefaultUninstaller = flows.getOrNull(18) as? Boolean ?: false
         @Suppress("UNCHECKED_CAST")
-        val backendPriority = flows.getOrNull(19) as? List<app.pwhs.universalinstaller.domain.model.InstallBackend>
+        val backendPriority = flows.getOrNull(18) as? List<app.pwhs.universalinstaller.domain.model.InstallBackend>
             ?: app.pwhs.universalinstaller.domain.model.InstallBackend.DEFAULT_ORDER
 
         val versionName = try {
@@ -104,7 +103,6 @@ object SettingUiStateBuilder {
             appProfileMapping = ProfileManager.parseMapping(mappingJson),
             selectedLanguage = selectedLang,
             isDefaultInstaller = isDefault,
-            isDefaultUninstaller = isDefaultUninstaller,
             useCustomAuthorizer = useCustomAuthorizer,
             customAuthorizerCommand = customAuthorizerCommand,
             useMicroG = useMicroG && app.pwhs.universalinstaller.util.MicroGCompat.isAvailable(application),

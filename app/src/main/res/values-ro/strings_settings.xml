@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Rezervă</string>
     <string name="setting_porter_not_running">Porter este instalat, dar nu rulează</string>
     <string name="setting_porter_start_service_hint">Deschideți Porter și porniți mai întâi serviciul</string>
-    <string name="setting_default_uninstaller_title">Setează ca dezinstalator prestabilit</string>
-    <string name="setting_default_uninstaller_subtitle">Setează Multiversal-installer ca gestionare prestabilită a dezinstalărilor (necesită Shizuku, Porter sau Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">Activați mai întâi Shizuku sau Root pentru a schimba dezinstalatorul prestabilit</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer este acum dezinstalatorul prestabilit</string>
-    <string name="setting_default_uninstaller_disabled">Preferința de dezinstalator prestabilit a fost ștearsă</string>
-    <string name="setting_default_uninstaller_failed">Nu s-a putut schimba dezinstalatorul prestabilit</string>
     <string name="about_section_more_apps">Aplicațiile noastre</string>
     <string name="setting_more_apps_title">Mai multe aplicații de la PWHS</string>
     <string name="setting_more_apps_subtitle">Descoperiți utilitare open-source utile</string>

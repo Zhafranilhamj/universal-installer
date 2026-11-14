@@ -143,7 +143,6 @@ fun SettingScreen(
         onAutoConfirmExternalInstallChanged = viewModel::setAutoConfirmExternalInstall,
         onShowDownloadTabChanged = viewModel::setShowDownloadTab,
         onDefaultInstallerChanged = viewModel::toggleDefaultInstaller,
-        onDefaultUninstallerChanged = viewModel::toggleDefaultUninstaller,
         onProfilesClick = {
             context.startActivity(android.content.Intent(context, app.pwhs.universalinstaller.presentation.setting.profile.ProfileActivity::class.java))
         },
@@ -187,7 +186,6 @@ private fun SettingUi(
     onAutoConfirmExternalInstallChanged: (Boolean) -> Unit = {},
     onShowDownloadTabChanged: (Boolean) -> Unit = {},
     onDefaultInstallerChanged: (Boolean) -> Unit = {},
-    onDefaultUninstallerChanged: (Boolean) -> Unit = {},
     onProfilesClick: () -> Unit = {},
     analyticsEnabled: Boolean = true,
     onAnalyticsEnabledChanged: (Boolean) -> Unit = {},
@@ -296,7 +294,6 @@ private fun SettingUi(
                 stringResource(R.string.setting_auto_confirm_title),
                 stringResource(R.string.setting_show_download_tab_title),
                 stringResource(R.string.setting_default_installer_title),
-                stringResource(R.string.setting_default_uninstaller_title), "uninstaller",
                 stringResource(R.string.setting_auto_approve_title),
                 "auto approve", "whitelist", "trusted",
             )
@@ -374,7 +371,6 @@ private fun SettingUi(
                     onDeleteApkChanged = onDeleteApkChanged,
                     onAutoOpenAfterInstallChanged = onAutoOpenAfterInstallChanged,
                     onDefaultInstallerChanged = onDefaultInstallerChanged,
-                    onDefaultUninstallerChanged = onDefaultUninstallerChanged,
                     onOpenInstallOptions = { showInstallOptionsSheet = true },
                     onOpenInstallPriority = { showInstallPrioritySheet = true },
                 )

@@ -264,14 +264,12 @@ class FullInstallerBackendFactory : InstallerBackendFactory {
         }
     }
 
-    override suspend fun setDefaultUninstallerViaRoot(
+    override suspend fun restoreStockUninstallerViaRoot(
         context: Context,
-        component: ComponentName,
-        lock: Boolean,
     ): Result<Unit> = withContext(Dispatchers.IO) {
         runCatching {
             val service = obtainPrivilegedService(context.applicationContext as Application)
-            service.setDefaultUninstaller(component, lock)
+            service.restoreStockUninstaller()
         }
     }
 

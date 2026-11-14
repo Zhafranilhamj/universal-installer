@@ -49,7 +49,6 @@ internal fun LazyListScope.InstallSection(
     onDeleteApkChanged: (Boolean) -> Unit,
     onAutoOpenAfterInstallChanged: (Boolean) -> Unit,
     onDefaultInstallerChanged: (Boolean) -> Unit,
-    onDefaultUninstallerChanged: (Boolean) -> Unit = {},
     onOpenInstallOptions: () -> Unit = {},
     onOpenInstallPriority: () -> Unit = {},
 ) {
@@ -200,17 +199,6 @@ internal fun LazyListScope.InstallSection(
                     // Don't gate on shizukuAvailable here — that's true at NO_PERMISSION too,
                     // and the toggle would silently no-op. Require the backend to be actually
                     // ready; tapping the disabled-state hint covers the "needs grant" case.
-                    enabled = uiState.shizukuState == ShizukuState.READY ||
-                            uiState.rootState == RootState.READY ||
-                            uiState.useRoot
-                )
-            }
-            SearchableItem(q, stringResource(R.string.setting_default_uninstaller_title), stringResource(R.string.setting_default_uninstaller_subtitle)) {
-                SwitchPreference(
-                    title = stringResource(R.string.setting_default_uninstaller_title),
-                    subtitle = stringResource(R.string.setting_default_uninstaller_subtitle),
-                    checked = uiState.isDefaultUninstaller,
-                    onCheckedChange = onDefaultUninstallerChanged,
                     enabled = uiState.shizukuState == ShizukuState.READY ||
                             uiState.rootState == RootState.READY ||
                             uiState.useRoot

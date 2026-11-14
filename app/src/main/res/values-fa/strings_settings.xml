@@ -99,12 +99,6 @@
     <string name="setting_default_installer_enabled">اکنون Multiversal-installer نصب‌کننده پیش‌فرض است</string>
     <string name="setting_default_installer_disabled">نصب‌کننده سیستم بازیابی شد</string>
     <string name="setting_default_installer_failed">تغییر نصب‌کننده پیش‌فرض ناموفق بود</string>
-    <string name="setting_default_uninstaller_title">تنظیم به‌عنوان لغو نصب‌کننده پیش‌فرض</string>
-    <string name="setting_default_uninstaller_subtitle">تنظیم Multiversal-installer به‌عنوان مدیر پیش‌فرض لغو نصب (نیازمند Shizuku، Porter یا Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">ابتدا Shizuku یا Root را فعال کنید تا لغو نصب‌کننده پیش‌فرض را تغییر دهید</string>
-    <string name="setting_default_uninstaller_enabled">اکنون Multiversal-installer لغو نصب‌کننده پیش‌فرض است</string>
-    <string name="setting_default_uninstaller_disabled">تنظیم لغو نصب‌کننده پیش‌فرض پاک شد</string>
-    <string name="setting_default_uninstaller_failed">تغییر لغو نصب‌کننده پیش‌فرض ناموفق بود</string>
     <string name="setting_shizuku_options_install_group">نصب</string>
     <string name="setting_shizuku_options_uninstall_group">لغو نصب</string>
     <string name="setting_shizuku_uninstall_keep_data">نگه‌داشتن داده‌های برنامه</string>

@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Резерв</string>
     <string name="setting_porter_not_running">Porter установлен, но не запущен</string>
     <string name="setting_porter_start_service_hint">Сначала откройте Porter и запустите службу</string>
-    <string name="setting_default_uninstaller_title">Деинсталлятор по умолчанию</string>
-    <string name="setting_default_uninstaller_subtitle">Сделать Multiversal-installer деинсталлятором по умолчанию (требует Shizuku, Porter или Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">Сначала включите Shizuku или Root для смены деинсталлятора</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer теперь деинсталлятор по умолчанию</string>
-    <string name="setting_default_uninstaller_disabled">Настройки деинсталлятора по умолчанию сброшены</string>
-    <string name="setting_default_uninstaller_failed">Не удалось изменить деинсталлятор по умолчанию</string>
     <string name="about_section_more_apps">Наши приложения</string>
     <string name="setting_more_apps_title">Другие приложения от PWHS</string>
     <string name="setting_more_apps_subtitle">Откройте для себя полезные утилиты с открытым исходным кодом</string>

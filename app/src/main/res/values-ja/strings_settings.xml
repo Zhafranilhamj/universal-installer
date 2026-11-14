@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">フォールバック</string>
     <string name="setting_porter_not_running">Porterはインストールされていますが実行されていません</string>
     <string name="setting_porter_start_service_hint">先にPorterを開いてサービスを開始してください</string>
-    <string name="setting_default_uninstaller_title">デフォルトのアンインストーラーに設定</string>
-    <string name="setting_default_uninstaller_subtitle">Multiversal-installerをアンインストールのデフォルトハンドラーに設定（Shizuku、PorterまたはRootが必要）</string>
-    <string name="setting_default_uninstaller_needs_backend">デフォルトのアンインストーラーを変更するには、まずShizukuまたはRootを有効にしてください</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installerがデフォルトのアンインストーラーになりました</string>
-    <string name="setting_default_uninstaller_disabled">デフォルトのアンインストーラー設定を解除しました</string>
-    <string name="setting_default_uninstaller_failed">デフォルトのアンインストーラーの変更に失敗しました</string>
     <string name="about_section_more_apps">開発者のアプリ</string>
     <string name="setting_more_apps_title">PWHSのその他のアプリ</string>
     <string name="setting_more_apps_subtitle">オープンソースで便利なユーティリティを発見</string>

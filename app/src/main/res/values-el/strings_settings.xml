@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Εναλλακτική</string>
     <string name="setting_porter_not_running">Το Porter είναι εγκατεστημένο αλλά δεν εκτελείται</string>
     <string name="setting_porter_start_service_hint">Ανοίξτε πρώτα το Porter και ξεκινήστε την υπηρεσία του</string>
-    <string name="setting_default_uninstaller_title">Ορισμός ως προεπιλεγμένου προγράμματος απεγκατάστασης</string>
-    <string name="setting_default_uninstaller_subtitle">Ορισμός του Multiversal-installer ως προεπιλογής για απεγκαταστάσεις (απαιτείται Shizuku, Porter ή Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">Ενεργοποιήστε πρώτα το Shizuku ή το Root για να αλλάξετε την προεπιλογή</string>
-    <string name="setting_default_uninstaller_enabled">Το Multiversal-installer είναι τώρα το προεπιλεγμένο πρόγραμμα απεγκατάστασης</string>
-    <string name="setting_default_uninstaller_disabled">Η προτίμηση προεπιλεγμένου προγράμματος απεγκατάστασης καταργήθηκε</string>
-    <string name="setting_default_uninstaller_failed">Αποτυχία αλλαγής προεπιλεγμένου προγράμματος απεγκατάστασης</string>
     <string name="about_section_more_apps">Οι εφαρμογές μας</string>
     <string name="setting_more_apps_title">Περισσότερες εφαρμογές από την PWHS</string>
     <string name="setting_more_apps_subtitle">Ανακαλύψτε χρήσιμες εφαρμογές ανοιχτού κώδικα</string>
