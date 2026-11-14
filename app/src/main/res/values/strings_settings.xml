@@ -102,6 +102,8 @@
     <string name="setting_default_installer_enabled">Multiversal-installer is now the default</string>
     <string name="setting_default_installer_disabled">System installer restored</string>
     <string name="setting_default_installer_failed">Failed to change default installer</string>
+    <string name="setting_default_uninstaller_removed_title">Default uninstaller</string>
+    <string name="setting_default_uninstaller_removed_reason">Removed in 1.23.4: Android does not allow any app, including this one, to replace the built-in uninstall screen. Sideloaded apps never win the registration the old switch relied on, so uninstalling apps keeps opening the Android system uninstaller.</string>
     <string name="setting_shizuku_options_install_group">Install</string>
     <string name="setting_shizuku_options_uninstall_group">Uninstall</string>
     <string name="setting_shizuku_uninstall_keep_data">Keep app data</string>

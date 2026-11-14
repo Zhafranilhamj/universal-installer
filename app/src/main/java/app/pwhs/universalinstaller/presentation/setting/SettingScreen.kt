@@ -294,6 +294,7 @@ private fun SettingUi(
                 stringResource(R.string.setting_auto_confirm_title),
                 stringResource(R.string.setting_show_download_tab_title),
                 stringResource(R.string.setting_default_installer_title),
+                stringResource(R.string.setting_default_uninstaller_removed_reason), "uninstaller", "default uninstaller",
                 stringResource(R.string.setting_auto_approve_title),
                 "auto approve", "whitelist", "trusted",
             )

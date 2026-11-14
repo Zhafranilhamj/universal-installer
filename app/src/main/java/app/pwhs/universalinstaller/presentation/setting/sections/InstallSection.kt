@@ -11,6 +11,7 @@ import androidx.compose.material.icons.rounded.AdminPanelSettings
 import androidx.compose.material.icons.rounded.RocketLaunch
 import androidx.compose.material.icons.rounded.SettingsApplications
 import androidx.compose.material.icons.rounded.Tune
+import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.Wallpaper
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -202,6 +203,21 @@ internal fun LazyListScope.InstallSection(
                     enabled = uiState.shizukuState == ShizukuState.READY ||
                             uiState.rootState == RootState.READY ||
                             uiState.useRoot
+                )
+            }
+            // Android reserves the system uninstaller: a sideloaded app's handler is
+            // priority-capped at 0 (stock privileged handler keeps priority 1) and the
+            // preferred-activity list is only consulted on an exact tie. The former
+            // "Set as default uninstaller" switch could never win, so it was removed
+            // in 1.23.4 — this read-only row tells the user why.
+            SearchableItem(q, stringResource(R.string.setting_default_uninstaller_removed_reason), "uninstaller default removed why") {
+                ListItem(
+                    headlineContent = { Text(stringResource(R.string.setting_default_uninstaller_removed_title)) },
+                    supportingContent = { Text(stringResource(R.string.setting_default_uninstaller_removed_reason)) },
+                    leadingContent = {
+                        Icon(Icons.Rounded.Info, null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                    },
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
             }
         }
