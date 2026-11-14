@@ -84,7 +84,6 @@ class SettingPrivilegeDelegate(
     )
 
     val isDefaultInstaller: StateFlow<Boolean> = defaultRoleDelegate.isDefaultInstaller
-    val isDefaultUninstaller: StateFlow<Boolean> = defaultRoleDelegate.isDefaultUninstaller
 
     private val binderReceivedListener = Shizuku.OnBinderReceivedListener {
         Timber.d("Shizuku binder received")
@@ -167,7 +166,6 @@ class SettingPrivilegeDelegate(
             }
         }
         defaultRoleDelegate.updateDefaultInstallerStatus()
-        defaultRoleDelegate.updateDefaultUninstallerStatus()
     }
 
     fun cleanUp() {
@@ -488,6 +486,4 @@ class SettingPrivilegeDelegate(
 
     fun toggleDefaultInstaller(enabled: Boolean) = defaultRoleDelegate.toggleDefaultInstaller(enabled)
     fun updateDefaultInstallerStatus() = defaultRoleDelegate.updateDefaultInstallerStatus()
-    fun toggleDefaultUninstaller(enabled: Boolean) = defaultRoleDelegate.toggleDefaultUninstaller(enabled)
-    fun updateDefaultUninstallerStatus() = defaultRoleDelegate.updateDefaultUninstallerStatus()
 }

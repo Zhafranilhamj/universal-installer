@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Fallback</string>
     <string name="setting_porter_not_running">Porter ist installiert, läuft aber nicht</string>
     <string name="setting_porter_start_service_hint">Öffnen Sie Porter und starten Sie zuerst den Dienst</string>
-    <string name="setting_default_uninstaller_title">Als Standard-Deinstallationsprogramm festlegen</string>
-    <string name="setting_default_uninstaller_subtitle">Multiversal-installer als Standard für Deinstallationen festlegen (erfordert Shizuku, Porter oder Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">Aktivieren Sie zuerst Shizuku oder Root, um das Standard-Deinstallationsprogramm zu ändern</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer ist jetzt das Standard-Deinstallationsprogramm</string>
-    <string name="setting_default_uninstaller_disabled">Standard-Deinstallationsprogramm zurückgesetzt</string>
-    <string name="setting_default_uninstaller_failed">Änderung des Standard-Deinstallationsprogramms fehlgeschlagen</string>
     <string name="about_section_more_apps">Unsere Apps</string>
     <string name="setting_more_apps_title">Weitere Apps von PWHS</string>
     <string name="setting_more_apps_subtitle">Nützliche Open-Source-Dienstprogramme entdecken</string>

@@ -38,9 +38,6 @@ class SettingDefaultRoleDelegate(
     private val _isDefaultInstaller = MutableStateFlow(false)
     val isDefaultInstaller: StateFlow<Boolean> = _isDefaultInstaller.asStateFlow()
 
-    private val _isDefaultUninstaller = MutableStateFlow(false)
-    val isDefaultUninstaller: StateFlow<Boolean> = _isDefaultUninstaller.asStateFlow()
-
     fun toggleDefaultInstaller(enabled: Boolean) {
         scope.launch(Dispatchers.IO) {
             updateShizukuState()
@@ -132,64 +129,4 @@ class SettingDefaultRoleDelegate(
         }
     }
 
-    fun toggleDefaultUninstaller(enabled: Boolean) {
-        scope.launch(Dispatchers.IO) {
-            updateShizukuState()
-            val prefs = dataStore.data.first()
-            val useRoot = prefs[PreferencesKeys.USE_ROOT] ?: false
-            val currentShizukuState = shizukuState()
-            val currentRootState = rootState()
-            val shizukuReady = currentShizukuState == ShizukuState.READY
-            val rootReady = if (useRoot) {
-                if (currentRootState == RootState.READY) true
-                else backendFactory.requestRoot() == RootState.READY
-            } else currentRootState == RootState.READY
-
-            if (!shizukuReady && !rootReady) {
-                when {
-                    currentShizukuState == ShizukuState.NO_PERMISSION && !useRoot -> requestShizukuPermission()
-                    currentShizukuState == ShizukuState.NOT_RUNNING && !useRoot -> emitEvent(startServiceHint())
-                    else -> emitEvent(R.string.setting_default_uninstaller_needs_backend)
-                }
-                return@launch
-            }
-
-            val component = defaultUninstallerComponent()
-            val result = if (useRoot && rootReady) {
-                backendFactory.setDefaultUninstallerViaRoot(application, component, enabled)
-            } else {
-                app.pwhs.universalinstaller.util.ShizukuDefaultInstaller.setDefaultUninstaller(component, enabled)
-            }
-            result
-                .onSuccess {
-                    dataStore.edit { it[PreferencesKeys.PREFERRED_DEFAULT_UNINSTALLER] = enabled }
-                    if (enabled) app.pwhs.universalinstaller.util.BatteryOptimizationHelper.allowBackground(application, useRoot && rootReady)
-                    updateDefaultUninstallerStatus()
-                    emitEvent(
-                        if (enabled) R.string.setting_default_uninstaller_enabled
-                        else R.string.setting_default_uninstaller_disabled,
-                    )
-                }
-                .onFailure { e ->
-                    Timber.e(e, "Failed to toggle default uninstaller")
-                    emitEvent(R.string.setting_default_uninstaller_failed)
-                }
-        }
-    }
-
-    private fun defaultUninstallerComponent(): ComponentName =
-        ComponentName(application, "app.pwhs.universalinstaller.presentation.manage.uninstall.DialogUninstallActivity")
-
-    fun updateDefaultUninstallerStatus() {
-        scope.launch(Dispatchers.IO) {
-            val uri = android.net.Uri.parse("package:app.pwhs.universalinstaller.test")
-            val pDelete = Intent(Intent.ACTION_DELETE).apply { addCategory(Intent.CATEGORY_DEFAULT); data = uri }
-            val pUninstall = Intent(Intent.ACTION_UNINSTALL_PACKAGE).apply { addCategory(Intent.CATEGORY_DEFAULT); data = uri }
-            val pm = application.packageManager
-            val rDelete = runCatching { pm.resolveActivity(pDelete, PackageManager.MATCH_DEFAULT_ONLY) }.getOrNull()
-            val rUninstall = runCatching { pm.resolveActivity(pUninstall, PackageManager.MATCH_DEFAULT_ONLY) }.getOrNull()
-            val pkg = application.packageName
-            _isDefaultUninstaller.value = rDelete?.activityInfo?.packageName == pkg || rUninstall?.activityInfo?.packageName == pkg
-        }
-    }
 }

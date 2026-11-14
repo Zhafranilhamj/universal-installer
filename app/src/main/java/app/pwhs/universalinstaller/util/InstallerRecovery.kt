@@ -31,19 +31,11 @@ object InstallerRecovery {
         try {
             if (!ShizukuReadiness.await(context)) return@withLock
             val prefs = context.dataStore.data.first()
-            if (prefs[PreferencesKeys.PREFERRED_DEFAULT_INSTALLER] == true ||
-                prefs[PreferencesKeys.PREFERRED_DEFAULT_UNINSTALLER] == true) {
-                BatteryOptimizationHelper.allowBackground(context)
-            }
             if (prefs[PreferencesKeys.PREFERRED_DEFAULT_INSTALLER] == true) {
+                BatteryOptimizationHelper.allowBackground(context)
                 ShizukuDefaultInstaller.setDefaultInstaller(ComponentName(context,
                     "app.pwhs.universalinstaller.presentation.install.DialogInstallActivity"), true)
                     .onFailure { Timber.w(it, "Could not restore installer preference") }
-            }
-            if (prefs[PreferencesKeys.PREFERRED_DEFAULT_UNINSTALLER] == true) {
-                ShizukuDefaultInstaller.setDefaultUninstaller(ComponentName(context,
-                    "app.pwhs.universalinstaller.presentation.manage.uninstall.DialogUninstallActivity"), true)
-                    .onFailure { Timber.w(it, "Could not restore uninstaller preference") }
             }
         } catch (e: kotlinx.coroutines.CancellationException) {
             throw e

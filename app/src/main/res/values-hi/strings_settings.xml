@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">फ़ॉलबैक</string>
     <string name="setting_porter_not_running">पोर्टर इंस्टॉल है लेकिन चल नहीं रहा है</string>
     <string name="setting_porter_start_service_hint">पहले पोर्टर खोलें और इसकी सेवा शुरू करें</string>
-    <string name="setting_default_uninstaller_title">डिफ़ॉल्ट अनइंस्टालर के रूप में सेट करें</string>
-    <string name="setting_default_uninstaller_subtitle">अनइंस्टॉल के लिए यूनिवर्सल इंस्टालर को डिफ़ॉल्ट हैंडलर बनाएं (शिज़ुकु, पोर्टर या रूट आवश्यक)</string>
-    <string name="setting_default_uninstaller_needs_backend">डिफ़ॉल्ट अनइंस्टालर बदलने के लिए पहले शिज़ुकु या रूट सक्षम करें</string>
-    <string name="setting_default_uninstaller_enabled">यूनिवर्सल इंस्टालर अब डिफ़ॉल्ट अनइंस्टालर है</string>
-    <string name="setting_default_uninstaller_disabled">डिफ़ॉल्ट अनइंस्टालर वरीयता साफ़ की गई</string>
-    <string name="setting_default_uninstaller_failed">डिफ़ॉल्ट अनइंस्टालर बदलने में विफल</string>
     <string name="about_section_more_apps">हमारे ऐप्स</string>
     <string name="setting_more_apps_title">PWHS द्वारा अन्य ऐप्स</string>
     <string name="setting_more_apps_subtitle">ओपन-सोर्स और उपयोगी टूल्स खोजें</string>

@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">대체</string>
     <string name="setting_porter_not_running">Porter가 설치되어 있으나 실행되지 않았습니다</string>
     <string name="setting_porter_start_service_hint">먼저 Porter를 열고 서비스를 시작해 주세요</string>
-    <string name="setting_default_uninstaller_title">기본 제거 프로그램으로 설정</string>
-    <string name="setting_default_uninstaller_subtitle">Multiversal-installer를 기본 제거 프로그램으로 설정 (Shizuku, Porter 또는 Root 필요)</string>
-    <string name="setting_default_uninstaller_needs_backend">기본 제거 프로그램을 변경하려면 먼저 Shizuku 또는 Root를 활성화하세요</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer가 기본 제거 프로그램으로 설정되었습니다</string>
-    <string name="setting_default_uninstaller_disabled">기본 제거 프로그램 설정이 해제되었습니다</string>
-    <string name="setting_default_uninstaller_failed">기본 제거 프로그램 변경 실패</string>
     <string name="about_section_more_apps">추천 앱</string>
     <string name="setting_more_apps_title">PWHS의 다른 앱</string>
     <string name="setting_more_apps_subtitle">오픈소스 및 유용한 유틸리티 둘러보기</string>

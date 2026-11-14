@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Alternativa</string>
     <string name="setting_porter_not_running">Porter está instalado pero no se está ejecutando</string>
     <string name="setting_porter_start_service_hint">Abra Porter e inicie su servicio primero</string>
-    <string name="setting_default_uninstaller_title">Establecer como desinstalador predeterminado</string>
-    <string name="setting_default_uninstaller_subtitle">Establecer Multiversal-installer como gestor predeterminado de desinstalaciones (requiere Shizuku, Porter o Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">Habilite Shizuku o Root primero para cambiar el desinstalador predeterminado</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer es ahora el desinstalador predeterminado</string>
-    <string name="setting_default_uninstaller_disabled">Preferencia de desinstalador predeterminado restablecida</string>
-    <string name="setting_default_uninstaller_failed">Error al cambiar el desinstalador predeterminado</string>
     <string name="about_section_more_apps">Nuestras aplicaciones</string>
     <string name="setting_more_apps_title">Más aplicaciones de PWHS</string>
     <string name="setting_more_apps_subtitle">Descubra utilidades útiles y de código abierto</string>

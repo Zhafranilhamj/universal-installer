@@ -5,13 +5,10 @@ import android.content.IntentFilter
 import java.lang.reflect.Method
 
 /**
- * Preferred-activity registration shared by the installer and the uninstaller. APK filters carry a
- * MIME type, which replacePreferredActivity explicitly rejects, so the installer already goes
- * through `addPreferredActivity`. The uninstaller uses the same path rather than trusting
- * `replacePreferredActivity`, because this registration is accepted silently while matching
- * nothing — see [DefaultInstallerLogic] for the failure contract. On Android 12+ the call gets
- * `removeExisting`, which replaces only matching filters and preserves this package's unrelated
- * defaults.
+ * Preferred-activity registration used by the default-installer flow. APK filters carry a
+ * MIME type, which replacePreferredActivity explicitly rejects, so the installer goes
+ * through `addPreferredActivity`. On Android 12+ the call gets `removeExisting`, which
+ * replaces only matching filters and preserves this package's unrelated defaults.
  */
 internal object MimePreferredActivity {
     internal fun methodFor(proxyClass: Class<*>, sdkInt: Int): Method {

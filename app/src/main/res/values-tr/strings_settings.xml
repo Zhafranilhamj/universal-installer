@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Yedek</string>
     <string name="setting_porter_not_running">Porter yüklü ancak çalışmıyor</string>
     <string name="setting_porter_start_service_hint">Önce Porter\'ı açın ve hizmetini başlatın</string>
-    <string name="setting_default_uninstaller_title">Varsayılan kaldırıcı olarak ayarla</string>
-    <string name="setting_default_uninstaller_subtitle">Multiversal-installer\'ı kaldırma işlemleri için varsayılan yapın (Shizuku, Porter veya Root gerektirir)</string>
-    <string name="setting_default_uninstaller_needs_backend">Varsayılan kaldırıcıyı değiştirmek için önce Shizuku veya Root\'u etkinleştirin</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer artık varsayılan kaldırıcı</string>
-    <string name="setting_default_uninstaller_disabled">Varsayılan kaldırıcı tercihi temizlendi</string>
-    <string name="setting_default_uninstaller_failed">Varsayılan kaldırıcı değiştirilemedi</string>
     <string name="about_section_more_apps">Uygulamalarımız</string>
     <string name="setting_more_apps_title">PWHS Tarafından Geliştirilen Diğer Uygulamalar</string>
     <string name="setting_more_apps_subtitle">Açık kaynaklı ve kullanışlı araçları keşfedin</string>

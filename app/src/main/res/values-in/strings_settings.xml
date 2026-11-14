@@ -334,12 +334,6 @@
     <string name="setting_install_priority_fallback">Cadangan</string>
     <string name="setting_porter_not_running">Porter terpasang tetapi tidak berjalan</string>
     <string name="setting_porter_start_service_hint">Buka Porter dan jalankan layanannya terlebih dahulu</string>
-    <string name="setting_default_uninstaller_title">Tetapkan sebagai pencopot default</string>
-    <string name="setting_default_uninstaller_subtitle">Tetapkan Multiversal-installer sebagai penangan pencopotan default (perlu Shizuku, Porter, atau Root)</string>
-    <string name="setting_default_uninstaller_needs_backend">Aktifkan Shizuku atau Root terlebih dahulu untuk mengubah pencopot default</string>
-    <string name="setting_default_uninstaller_enabled">Multiversal-installer sekarang menjadi pencopot default</string>
-    <string name="setting_default_uninstaller_disabled">Preferensi pencopot default dibersihkan</string>
-    <string name="setting_default_uninstaller_failed">Gagal mengubah pencopot default</string>
     <string name="about_section_more_apps">Aplikasi Kami</string>
     <string name="setting_more_apps_title">Aplikasi Lainnya oleh PWHS</string>
     <string name="setting_more_apps_subtitle">Temukan utilitas sumber terbuka yang bermanfaat</string>

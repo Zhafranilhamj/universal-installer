@@ -120,13 +120,11 @@ interface InstallerBackendFactory {
     ): Result<Unit>
 
     /**
-     * Toggles preferred-activity registration via libsu RootService so [component] becomes
-     * the default package uninstaller.
+     * Re-enable the stock system uninstaller components that releases up to 1.23.3 may have
+     * disabled when the "set as default uninstaller" switch was used. Best effort and idempotent.
      */
-    suspend fun setDefaultUninstallerViaRoot(
+    suspend fun restoreStockUninstallerViaRoot(
         context: android.content.Context,
-        component: android.content.ComponentName,
-        lock: Boolean,
     ): Result<Unit>
 
     /**
