@@ -1,0 +1,1 @@
+• Removed the "Set as default uninstaller" option. Android doesn't let any app replace its built-in uninstall screen, so the switch could never work. Uninstalling apps works exactly as before.
